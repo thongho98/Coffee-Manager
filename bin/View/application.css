@@ -1,0 +1,42 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color: #F5F6CE;
+}
+.button{
+	-fx-background-color: #6CDDF3;
+} 
+.button:hover  {
+	-fx-background-color: #2ABEDC;
+}
+.button:pressed{
+	-fx-background-color: Red;
+}
+#flPane .button:focused{
+	-fx-border-color: yellow;
+	-fx-border-width: 7px;
+}
+
+.table-view .column-header,
+ .table-view .column-header-background  .filler {
+ 	-fx-cell-size: 20px;
+ 	-fx-background-color: #2D75E8;
+ }
+.date-picker > .text-field {
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: 1 0 1 1;
+    -fx-background-radius: 2 0 0 2;
+    -fx-font-size: 15px;
+    -fx-opacity: 1;
+}
+
+.time-picker > .text-field {
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: 1 0 1 1;
+    -fx-background-radius: 2 0 0 2;
+    -fx-font-size: 20px;
+    -fx-opacity: 1;
+}

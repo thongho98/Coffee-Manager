@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="170.0" style="-fx-background-color: #3396FF;">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="55.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icon_left.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="55.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icon_people.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="196.0" layoutY="38.0" prefHeight="31.0" prefWidth="206.0" text="Form Register Staff" textFill="#1e96d7">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="196.0" layoutY="100.0" opacity="0.5" prefHeight="25.0" prefWidth="206.0" promptText="FullName" />
+      <JFXTextField layoutX="196.0" layoutY="156.0" opacity="0.5" prefHeight="25.0" prefWidth="206.0" promptText="Username" />
+      <JFXTextField layoutX="457.0" layoutY="156.0" opacity="0.5" prefHeight="25.0" prefWidth="206.0" promptText="Address" />
+      <JFXTextField layoutX="457.0" layoutY="213.0" opacity="0.5" prefHeight="25.0" prefWidth="206.0" promptText="Phone Number" />
+      <JFXPasswordField layoutX="196.0" layoutY="213.0" opacity="0.5" prefHeight="25.0" prefWidth="206.0" promptText="Password" />
+      <JFXButton layoutX="503.0" layoutY="328.0" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #3396FF;" text="Register" textFill="#fcfafa">
+         <font>
+            <Font name=".VnArial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="233.0" layoutY="327.0" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #3396FF;" text="Reset All" textFill="#fcf6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="btn_exit" fitHeight="31.0" fitWidth="43.0" layoutX="657.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/icon_exit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="43.0" layoutX="614.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXComboBox layoutX="196.0" layoutY="266.0" opacity="0.5" prefHeight="25.0" prefWidth="206.0" promptText="Position" />
+      <JFXTextField layoutX="457.0" layoutY="266.0" opacity="0.5" prefHeight="25.0" prefWidth="206.0" promptText="Salary" />
+      <JFXComboBox layoutX="457.0" layoutY="100.0" opacity="0.5" prefHeight="25.0" prefWidth="66.0" promptText="Day" />
+      <JFXComboBox layoutX="536.0" layoutY="100.0" opacity="0.5" prefHeight="25.0" prefWidth="66.0" promptText="Month" />
+      <JFXComboBox layoutX="614.0" layoutY="100.0" opacity="0.5" promptText="Year" />
+   </children>
+</AnchorPane>

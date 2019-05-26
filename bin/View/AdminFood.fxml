@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminFoodController">
+   <children>
+      <Pane layoutX="-12.0" prefHeight="116.0" prefWidth="1378.0" style="-fx-background-color: #82FA58;">
+         <children>
+            <Label layoutX="147.0" layoutY="25.0" prefHeight="65.0" prefWidth="187.0" text="THỨC UỐNG" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnHome" alignment="CENTER" contentDisplay="TOP" layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" onAction="#ClickHome" prefHeight="65.0" prefWidth="83.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="40" textOrigin="CENTER" wrappingWidth="40.214284896850586" />
+               </graphic>
+            </Button>
+            <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" glyphName="COFFEE" layoutX="25.0" layoutY="13.0" size="100" strikethrough="true" textOrigin="TOP" wrappingWidth="110.14286041259766" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableFood" layoutX="-1.0" layoutY="169.0" onMouseClicked="#clickItem" prefHeight="561.0" prefWidth="652.0">
+         <columns>
+            <TableColumn fx:id="idFood" prefWidth="112.00003051757812" text="Mã thức uống" />
+            <TableColumn fx:id="foodName" minWidth="0.0" prefWidth="184.0" text="Tên thức uống" />
+            <TableColumn fx:id="price" prefWidth="176.0" text="Đơn giá" />
+            <TableColumn fx:id="foodCategory" prefWidth="176.0" text="Tên loại thức uống" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="119.0" prefHeight="48.0" prefWidth="652.0" spacing="10.0">
+         <children>
+            <FontAwesomeIconView glyphName="SEARCH" size="30" wrappingWidth="31.0" />
+            <TextField fx:id="txtFindFood" prefHeight="34.0" prefWidth="392.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <Button fx:id="btnFindFood" mnemonicParsing="false" onAction="#ClickFindFood" prefHeight="37.0" prefWidth="192.0" text="Tìm kiếm" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <HBox layoutX="678.0" layoutY="630.0" prefHeight="92.0" prefWidth="640.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnAddFood" mnemonicParsing="false" onAction="#AddFood" prefHeight="88.0" prefWidth="361.0" text="Thêm món ăn" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdateFood" mnemonicParsing="false" onAction="#UpdateFood" prefHeight="88.0" prefWidth="361.0" text="Sửa món ăn" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDeleteFood" mnemonicParsing="false" onAction="#DeleteFood" prefHeight="88.0" prefWidth="361.0" text="Xóa món ăn" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Separator layoutX="660.0" layoutY="127.0" orientation="VERTICAL" prefHeight="606.0" prefWidth="6.0" />
+      <GridPane layoutX="682.0" layoutY="135.0" prefHeight="441.0" prefWidth="666.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="225.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="10.0" prefWidth="441.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Mã thức uống">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="Tên thức uống" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="Đơn giá" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="Tên loại thức uống" GridPane.rowIndex="3">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtIDFood" editable="false" prefHeight="65.0" prefWidth="441.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <TextField fx:id="txtFoodName" prefHeight="65.0" prefWidth="441.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <TextField fx:id="txtPrice" prefHeight="65.0" prefWidth="441.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <JFXComboBox fx:id="cbFoodCategory" prefHeight="57.0" prefWidth="441.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

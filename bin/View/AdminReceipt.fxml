@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminReceiptController">
+   <children>
+      <Pane layoutX="-12.0" prefHeight="116.0" prefWidth="1378.0" style="-fx-background-color: #F78181;">
+         <children>
+            <Label layoutX="147.0" layoutY="25.0" prefHeight="65.0" prefWidth="187.0" text="DOANH THU" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnHome" alignment="CENTER" contentDisplay="TOP" layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" onAction="#ClickHome" prefHeight="65.0" prefWidth="83.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="40" textOrigin="CENTER" wrappingWidth="40.214284896850586" />
+               </graphic></Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="MONEY" layoutX="25.0" layoutY="89.0" size="90" wrappingWidth="97.0" />
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" layoutY="116.0" prefHeight="65.0" prefWidth="717.0">
+         <children>
+            <JFXDatePicker fx:id="dateCheckin" prefHeight="48.0" prefWidth="247.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></JFXDatePicker>
+            <Button fx:id="btnReceipt" mnemonicParsing="false" onAction="#ClickReceipt" prefHeight="53.0" prefWidth="129.0" text="THỐNG KÊ">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin></Button>
+            <JFXDatePicker fx:id="dateCheckout" prefHeight="40.0" prefWidth="222.0">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin></JFXDatePicker>
+         </children>
+      </HBox>
+      <TableView fx:id="tableReceipt" layoutY="185.0" prefHeight="549.0" prefWidth="717.0">
+        <columns>
+          <TableColumn fx:id="idReceipt" prefWidth="91.0" text="Mã Hóa Đơn" />
+          <TableColumn fx:id="nameTable" minWidth="0.0" prefWidth="120.0" text="Bàn" />
+            <TableColumn fx:id="dateCheckIn" prefWidth="168.0" text="Thời gian CheckIn" />
+            <TableColumn fx:id="dateCheckOut" prefWidth="175.0" text="Thời gian CheckOut" />
+            <TableColumn fx:id="totalPrice" prefWidth="163.0" text="Tổng tiền" />
+        </columns>
+      </TableView>
+      <Separator layoutX="720.0" layoutY="185.0" orientation="VERTICAL" prefHeight="549.0" prefWidth="6.0" />
+      <LineChart fx:id="lineChart" layoutX="731.0" layoutY="205.0" prefHeight="527.0" prefWidth="613.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <HBox layoutX="730.0" layoutY="120.0" prefHeight="65.0" prefWidth="630.0">
+         <children>
+            <VBox prefHeight="65.0" prefWidth="120.0" style="-fx-background-color: #81F781;">
+               <children>
+                  <Label prefHeight="33.0" prefWidth="119.0" text="Tổng hóa đơn">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbReceipt" alignment="CENTER" prefHeight="33.0" prefWidth="120.0" text="0" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="65.0" prefWidth="139.0" style="-fx-background-color: #F3F781;">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="138.0" text="Tổng doanh thu">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbTotalPrice" alignment="CENTER" prefHeight="38.0" prefWidth="140.0" text="0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator layoutX="734.0" layoutY="187.0" prefHeight="3.0" prefWidth="630.0" />
+   </children>
+</AnchorPane>

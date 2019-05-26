@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <ImageView fitHeight="402.0" fitWidth="700.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../images/img_login1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="369.0" layoutY="28.0" prefHeight="352.0" prefWidth="308.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <JFXTextField fx:id="txtUsername" focusColor="#35d33a" layoutX="47.0" layoutY="86.0" prefHeight="30.0" prefWidth="245.0" promptText="Username/Email" style="-jfx-focus-color: #FFFFF;" unFocusColor="#c3c3c3">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <effect>
+                  <ColorAdjust brightness="0.55" />
+               </effect>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" cache="true" focusColor="#36bc46" layoutX="46.0" layoutY="162.0" prefHeight="30.0" prefWidth="245.0" promptText="Password" unFocusColor="#c9c9c9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <ColorAdjust brightness="0.62" />
+               </effect>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnLogin" layoutX="27.0" layoutY="232.0" onAction="#ClickLogin" prefHeight="42.0" prefWidth="264.0" style="-fx-background-color: #E45642;" text="Login" textFill="#f5f5f5">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="116.0" layoutY="14.0" prefHeight="59.0" prefWidth="88.0" text="Sign In" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Italic" size="29.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="hyperlinkForgotPass" layoutX="29.0" layoutY="297.0" onAction="#ClickHyperLink" prefHeight="28.0" prefWidth="122.0" text="Forgot Password?" textFill="#f8f8f8" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="14.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icon_people_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="12.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icon_key.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnQuit" layoutX="169.0" layoutY="294.0" onAction="#ClickQuit" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #E45642;" text="Quit" textFill="#fcf7f7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="107.0" layoutY="72.0" prefHeight="53.0" prefWidth="166.0" text="Welcome" textFill="#f22929">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="125.0" prefHeight="59.0" prefWidth="308.0" text="Coffee Manager" textFill="#fc1e1e">
+         <font>
+            <Font name="System Bold Italic" size="41.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="175.0" layoutX="115.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/icon_coffee.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

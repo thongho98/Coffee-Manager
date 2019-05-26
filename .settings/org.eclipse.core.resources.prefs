@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/Controller/AccountInformationController.java=UTF-8
+encoding//src/Controller/AdminAccountController.java=UTF-8
+encoding//src/Controller/AdminFoodCategoryController.java=UTF-8
+encoding//src/Controller/AdminFoodController.java=UTF-8
+encoding//src/Controller/AdminReceiptController.java=UTF-8
+encoding//src/Controller/AdminTableController.java=UTF-8
+encoding//src/Controller/HomeOrderTableController.java=UTF-8
+encoding//src/Controller/HomeStaffController.java=UTF-8
+encoding//src/Controller/LoginController.java=UTF-8
+encoding//src/Controller/PrintBillController.java=UTF-8
+encoding//src/DAO/HomeOrderTableDAO.java=UTF-8
+encoding//src/application/Main.java=UTF-8
